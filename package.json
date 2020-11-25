@@ -1,8 +1,28 @@
 {
-  "name": "luo-test-2",
+  "name": "FUI",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "repository": "git@github.com:luojiyin1987/luo-test-2.git",
-  "author": "luo-Y400 <sf@gmail.com>",
-  "license": "MIT"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrankFang/frank-test-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrankFang/frank-test-2/issues"
+  },
+  "homepage": "https://github.com/FrankFang/frank-test-2#readme",
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "html-webpack-plugin": "^3.2.0",
+    "typescript": "^3.3.3333",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1"
+  }
 }

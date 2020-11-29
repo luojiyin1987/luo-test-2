@@ -1,27 +1,31 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const devMode = process.env.NODE_ENV !== 'production';
 module.exports = {
-    mode: 'production',
-    entry: {
-        index: './lib/index.tsx'
-    },
-    output: {
-        path: path.resolve(__dirname, 'dist/lib'),
-        library: 'FUI',
-        libraryTarget: 'umd',
-    },
-    module: {
-        rules: [
-            {
-                test: /\.tsx?$/,
-                loader: 'awesome-typescript-loader'
-            }
-        ]
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: 'index.html'
-        })
-    ]
-
-}
+  entry: {
+    index: './lib/index.tsx',
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+  },
+  output: {
+    path: path.resolve(__dirname, 'dist/lib'),
+    library: 'FUI',
+    libraryTarget: 'umd',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        loader: 'awesome-typescript-loader',
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader',
+      },
+      {
+        test: /\.s([ac])ss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+    ],
+  },
+};

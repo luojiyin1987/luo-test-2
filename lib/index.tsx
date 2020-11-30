@@ -17,6 +17,9 @@ ReactDOM.render(
       onMouseLeave={() => {
         console.log('leave');
       }}
+      onTouchStart={() => {
+        console.log('touch');
+      }}
     />
   </div>,
   document.querySelector('#root')

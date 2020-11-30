@@ -2,13 +2,22 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import Icon from './icon';
 
-const fn = () => {
+const fn: React.MouseEventHandler = (e) => {
   console.log('fn');
 };
 
 ReactDOM.render(
   <div>
-    <Icon name="qq" onClick={fn} />
+    <Icon
+      name="qq"
+      onClick={fn}
+      onMouseEnter={() => {
+        console.log('enter');
+      }}
+      onMouseLeave={() => {
+        console.log('leave');
+      }}
+    />
   </div>,
   document.querySelector('#root')
 );

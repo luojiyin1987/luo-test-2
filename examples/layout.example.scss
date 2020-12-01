@@ -1,0 +1,26 @@
+@import "helper";
+.LayoutExample {
+  min-height: 40vh;
+  margin-bottom: 32px;
+  .header {
+    background: lighten($blue, 20%);
+    padding: 10px;
+    color: white;
+  }
+  .aside {
+    background: lighten($blue, 10%);
+    padding: 10px;
+    color: white;
+    width: 120px;
+  }
+  .main {
+    background: $blue;
+    padding: 10px;
+    color: white;
+  }
+  .footer {
+    background: lighten($blue, 20%);
+    padding: 10px;
+    color: white;
+  }
+}
